@@ -1,59 +1,17 @@
-# SitewardsAPI
+# Genetic Algorith Example
 
-This project consists in a PHP Rest API developed for Sitewards.
+This is the first example of how powerful a Genetic Algorith can be.
 
-## Getting Started
+## Purpose
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+This algorith was created to solve the question below, and can be used as an initial point of GA study.
 
-### Installing
+Consider a problem where ten non-repeated cards (from 1 to 10) are grouped into two sets A and B. 
+The objective function of set A is to get a sum of the values of the cards as close as possible to 36. 
+The purpose of set B is Obtain the result of multiplying the values of the cards as close to 360 as possible.
 
-#### dependencies
-In order to installing the application dependencies, it is necessary to run composer install command. This command will
-automatically download all project dependencies.
+Write a GA that solves this issue.
 
-```
-composer install
-```
+### The Fittest
 
-#### database
-
-The application uses MySQL database to persist data. The file [db_sitewards.sql](db_sitewards.sql) is the backup of the database and must to be
-restored.
-
-##### Initialize database
-
-To initialize the database for testing purposes, it was developed a system that uses the file [database_data.csv](database_data.csv) as data source.
-So it is necessary to put in this file all the data that should be persisted. Below, it is stated the correct order to put
-the information on this file.
-
-```
-book name, book_isbn13, book_isbn10, book_location, book_author
-```
-
-As we are using a .csv file, the information must to be separated using comma. Each row carries the information of one book which
-will be stored as one row in database.
-
-There is data on the database_data.csv file already, so, feel free to look it and add more data if you want.
-After that, just initialize the application and the software will retrieve all the information in this file, and
-it is going to persist them on the database.
-
-## Endpoints
-
-Below it is stated each endpoint in this api and its responsability. To see the endpoints declaration go to [index.php](index.php)
-file.
-
-Method | Pattern | Purpose | URL Params | Data Params
--------|---------|---------|------------|-------------
-GET | /books | Return the full book's list. | - | -
-GET | /books/name/{name} | Return only one book based in its name. | name=[string] | -
-GET | /books/author/{author} | Return all books from an specified author. | author=[string] | -
-GET | /books/holder/{holder} | Return all books which are with an specified holder (who belongs it now).  | holder=[string] | -
-GET | /books/{id} | Return only one book based in its id.  | id=[int] | -
-POST | /books | Add a new book.  | - | {"name":"Programming Pearls","isbn13":"978-0201657883","isbn10":"0201657880","author":"Jon Bentley","location":"Wellington"}
-PUT | /books/{id} | Change the holder of an specified book.  | id=[int] | {"name":"Anton"}
-
-
-## Built With
-
-* [Slim Framework 3](https://www.slimframework.com/) - A micro framework for PHP
+The Fittest element is one which has the fitness more closer than 0 as possible.
