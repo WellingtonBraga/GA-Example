@@ -14,4 +14,4 @@ Write a GA that solves this issue.
 
 ### The Fittest
 
-The Fittest element is one which has the fitness more closer than 0 as possible.
+The Fittest element is one which has the fitness more closer to 0 as possible.
